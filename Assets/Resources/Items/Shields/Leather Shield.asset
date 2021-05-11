@@ -9,19 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea16230dcce0bae41b8ac7285c47053e, type: 3}
-  m_Name: Greathammer
+  m_Script: {fileID: 11500000, guid: 94e97ac105f18d54d9060a323a841022, type: 3}
+  m_Name: Leather Shield
   m_EditorClassIdentifier: 
   m_uiImage: {fileID: 0}
   m_prefab: {fileID: 0}
-  m_level: 3
-  m_weight: 9
-  m_value: 200
-  m_requiredAttributes:
-  - attribute: 0
-    minimum: 10
-  - attribute: 1
-    minimum: 8
-  m_damage: 25
-  m_weaponType: 5
-  m_radius: 5
+  m_level: 1
+  m_weight: 3
+  m_value: 100
+  m_requiredAttributes: []
+  m_block: 5
+  m_shieldType: 0
