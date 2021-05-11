@@ -10,7 +10,8 @@ public class Shopkeeper : MonoBehaviour
         m_inventory.AddItems<Weapon>(o => o.m_damage > 10);
         m_inventory.AddItems<Shield>(o => o.m_shieldType == ShieldType.Greatshield);
         m_inventory.AddItems<Consumable>(o => o.name == "Small Healing Potion", 10);
-        UIManager.instance.CreateItemButtons(m_inventory);
+        //UIManager.instance.CreateItemButtons(m_inventory);
+        transform.SetToWorldOrigin();
     }
 }
 public class Inventory

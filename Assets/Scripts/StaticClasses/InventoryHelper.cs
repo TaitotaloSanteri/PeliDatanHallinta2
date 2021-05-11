@@ -30,6 +30,34 @@ public static class InventoryHelper
         }
     }
 
+    public static void RemoveItemFromInventory(this List<Inventory> inventory, Inventory itemToRemove)
+    {
+        Inventory inv = inventory.Find(i => i == itemToRemove);
+        if (inv.amount > 1)
+        {
+            inv.amount -= 1;
+        }
+        else
+        {
+            inventory.Remove(inv);
+        }
+    }
+    public static void AddItemToInventory(this List<Inventory> inventory, Inventory itemToAdd)
+    {
+        // Katsotaan löytyykö inventaariosta jo kyseistä itemiä
+        Inventory inv = inventory.Find(i => i.item.name == itemToAdd.item.name);
+        // Jos se löytyy, niin lisätään yksinkertaisesti amounttiin lisää
+        if (inv != null)
+        {
+            inv.amount += 1;
+        }
+        // Jos sitä ei löydy, niin sitten lisätään kokonaan uusi itemi inventaarioon
+        else
+        {
+            inventory.Add(new Inventory(itemToAdd.item, 1));
+        }
+    }
+
 
     //public static void AddItems<T>(this List<Item> items, Func<T, bool> condition = null)
     //    where T: Item
